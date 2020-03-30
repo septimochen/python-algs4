@@ -3,6 +3,7 @@ from algs4_sorts.stopwatch import StopWatch
 from algs4_sorts.insertion_sort import Insertion
 from algs4_sorts.selection_sort import Selection
 from algs4_sorts.shell import Shell
+from algs4_sorts.merge import Merge
 
 
 class SortCompare:
@@ -16,6 +17,8 @@ class SortCompare:
             Selection.sort(arr)
         elif alg == 'Shell':
             Shell.sort(arr)
+        elif alg == 'Merge':
+            Merge.sort(arr)
         return timer.elapsed_time()
 
     def time_random_input(self, alg, n, t):
@@ -25,10 +28,12 @@ class SortCompare:
             total += self.time(alg, arr)
         return total
 
+
 # how to run: python sort_compare.py Shell Insertion 1000 100
 
 if __name__ == "__main__":
     import sys
+
     agls1 = sys.argv[1]
     agls2 = sys.argv[2]
 
@@ -40,4 +45,4 @@ if __name__ == "__main__":
     t2 = sc.time_random_input(agls2, N, T)
 
     print("for {} random floats:".format(N))
-    print("{} is {:.2f} times faster than {}".format(agls1, t2/t1, agls2))
+    print("{} is {:.2f} times faster than {}".format(agls1, t2 / t1, agls2))
