@@ -25,6 +25,7 @@ class SortCompare:
             total += self.time(alg, arr)
         return total
 
+# how to run: python sort_compare.py Shell Insertion 1000 100
 
 if __name__ == "__main__":
     import sys
