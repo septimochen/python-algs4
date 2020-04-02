@@ -2,6 +2,7 @@ import numpy as np
 from algs4_sorts.stopwatch import StopWatch
 from algs4_sorts.insertion_sort import Insertion
 from algs4_sorts.selection_sort import Selection
+from algs4_sorts.quick import Quick
 from algs4_sorts.shell import Shell
 from algs4_sorts.merge import Merge
 
@@ -19,6 +20,8 @@ class SortCompare:
             Shell.sort(arr)
         elif alg == 'Merge':
             Merge.sort(arr)
+        elif alg == 'Quick':
+            Quick.sort(arr)
         return timer.elapsed_time()
 
     def time_random_input(self, alg, n, t):
