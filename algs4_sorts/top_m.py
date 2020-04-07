@@ -17,4 +17,3 @@ if __name__ == "__main__":
         stack.push(pq.del_min())
     for t in stack:
         print(t)
-
