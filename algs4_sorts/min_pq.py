@@ -13,10 +13,14 @@ class MinPQ:
         m = self.pq[0]
         self.pq[0], self.pq[-1] = self.pq[-1], self.pq[0]
         self.pq = self.pq[:-1]
+        self.sink(0)
         return m
 
     def is_empty(self):
-        return not self.pq[0]
+        return not self.pq
+
+    def size(self):
+        return len(self.pq)
 
     def swim(self, k):
         while k > 0 and self.pq[(k - 1) // 2] > self.pq[k]:
