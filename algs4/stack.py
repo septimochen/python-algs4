@@ -33,4 +33,3 @@ class Stack(object):
             self.n -= 1
             return item
 
-    
