@@ -6,6 +6,7 @@ from algs4_sorts.quick import Quick
 from algs4_sorts.shell import Shell
 from algs4_sorts.merge import Merge
 from algs4_sorts.quick_3way import Quick3way
+from algs4_sorts.heap import Heap
 
 
 class SortCompare:
@@ -25,6 +26,8 @@ class SortCompare:
             Quick.sort(arr)
         elif alg == 'Quick3way':
             Quick3way.sort(arr)
+        elif alg == 'Heap':
+            Heap.sort(arr)
         return timer.elapsed_time()
 
     def time_random_input(self, alg, n, t):
