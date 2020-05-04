@@ -60,9 +60,9 @@ if __name__ == "__main__":
     i = 0
     with open(sys.argv[1]) as f:
         for line in f:
-            for key in line.split():
-                st.put(key, i)
+            for word in line.split():
+                st.put(word, i)
                 i += 1
 
-    for key in st.keys():
-        print(key + ": " + str(st.get(key)))
+    for k in st.keys():
+        print(k + ": " + str(st.get(k)))
