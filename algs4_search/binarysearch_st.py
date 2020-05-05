@@ -65,12 +65,12 @@ if __name__ == "__main__":
     import sys
 
     st = BinarySearchST()
-    i = 0
+    num = 0
     with open(sys.argv[1]) as f:
         for line in f:
             for word in line.split():
                 st.put(word, i)
-                i += 1
+                num += 1
 
     for k in st.keys():
         print(k + ": " + str(st.get(k)))
