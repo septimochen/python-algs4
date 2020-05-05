@@ -69,7 +69,7 @@ if __name__ == "__main__":
     with open(sys.argv[1]) as f:
         for line in f:
             for word in line.split():
-                st.put(word, i)
+                st.put(word, num)
                 num += 1
 
     for k in st.keys():
