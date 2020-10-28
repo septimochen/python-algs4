@@ -1,4 +1,4 @@
-from .linklist import LinkIterator, Node
+from .linked_list import LinkIterator, Node
 
 
 class Stack(object):
