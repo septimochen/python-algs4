@@ -4,7 +4,18 @@ class TreeNode:
         self.left = None
         self.right = None
 
-    def traverse(self):
-        print(self.val)
-        self.traverse(self.left)
-        self.traverse(self.right)
+
+def traverse(t):
+    if t is None:
+        return
+    else:
+        traverse(t.left)
+        print(t.val)
+        traverse(t.right)
+
+
+if __name__ == "__main__":
+    tree = TreeNode(1)
+    tree.left = TreeNode(2)
+    tree.right = TreeNode(3)
+    traverse(tree)
